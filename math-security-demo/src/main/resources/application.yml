@@ -1,0 +1,56 @@
+server:
+  port: 80
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/securitydb?useUnicode=yes&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password :
+      
+#  thymeleaf:
+#    cache:
+#      false
+#    prefix:
+#      classpath:
+#        /web/
+#    suffix:
+#      .html
+#    mode:
+#      HTML5
+#    encoding:
+#      utf-8
+#    content-type:
+#      text/html
+
+  resources:
+    chain:
+      strategy:
+        content:
+          enabled: true
+          paths: /**
+
+  session:
+    store-type: none
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+
+security:
+  basic:
+    enabled: true
+
+
+#math:
+ # security:
+  #  browser:
+   #   loginPage:
+    #    /demo-signIn.html
+
+math:
+  security:
+    browser:
+      loginType: REDIRECT

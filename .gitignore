@@ -1,0 +1,4 @@
+# Project exclude paths
+/math-security-browser/target/
+/math-security-core/target/
+/math-security-demo/target/
